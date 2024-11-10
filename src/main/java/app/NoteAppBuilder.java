@@ -3,11 +3,11 @@ package app;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import interface_adapter.note.NoteController;
+import interface_adapter.note.TranslateTextController;
 import interface_adapter.note.NotePresenter;
 import interface_adapter.note.NoteViewModel;
 import use_case.note.NoteDataAccessInterface;
-import use_case.note.NoteInteractor;
+import use_case.note.TranslateTextInteractor;
 import use_case.note.NoteOutputBoundary;
 import view.NoteView;
 
@@ -20,7 +20,7 @@ public class NoteAppBuilder {
     private NoteDataAccessInterface noteDAO;
     private NoteViewModel noteViewModel = new NoteViewModel();
     private NoteView noteView;
-    private NoteInteractor noteInteractor;
+    private TranslateTextInteractor noteInteractor;
 
     /**
      * Sets the NoteDAO to be used in this application.
@@ -41,10 +41,10 @@ public class NoteAppBuilder {
      */
     public NoteAppBuilder addNoteUseCase() {
         final NoteOutputBoundary noteOutputBoundary = new NotePresenter(noteViewModel);
-        noteInteractor = new NoteInteractor(
+        noteInteractor = new TranslateTextInteractor(
                 noteDAO, noteOutputBoundary);
 
-        final NoteController controller = new NoteController(noteInteractor);
+        final TranslateTextController controller = new TranslateTextController(noteInteractor);
         if (noteView == null) {
             throw new RuntimeException("addNoteView must be called before addNoteUseCase");
         }

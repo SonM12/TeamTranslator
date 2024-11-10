@@ -6,7 +6,7 @@ import use_case.note.TranslateTextInputData;
 /**
  * The controller for the Login Use Case.
  */
-public class TranslateTextController {
+public class TranslateTextController implements TranslateTextInputBoundary {
 
     private final TranslateTextInputBoundary translateTextUseCaseInteractor;
 
@@ -18,11 +18,12 @@ public class TranslateTextController {
      * Executes the Login Use Case.
      * @param username the username of the user translate text
      * @param password the password of the user translate text
-     * @param repeatPassword the repeatPassword
+     * @param inputLanguage the language of the input text
+     * @param inputText the input text for the translation
      */
-    public void execute(String username, String password) {
+    public void execute(String username, String password, String inputLanguage, String inputText) {
         final TranslateTextInputData translateTextInputData = new TranslateTextInputData(
-                username, password, repeatPassword, inputLanguage, inputText);
+                username, password, inputLanguage, inputText);
 
         translateTextUseCaseInteractor.execute(translateTextInputData);
     }

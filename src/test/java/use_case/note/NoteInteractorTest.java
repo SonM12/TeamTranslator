@@ -37,7 +37,7 @@ public class NoteInteractorTest {
             }
         };
 
-        NoteInteractor noteInteractor = new NoteInteractor(noteDAO, noteOB);
+        TranslateTextInteractor noteInteractor = new TranslateTextInteractor(noteDAO, noteOB);
 
         noteInteractor.executeRefresh();
 

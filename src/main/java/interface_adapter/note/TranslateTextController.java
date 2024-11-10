@@ -1,15 +1,15 @@
 package interface_adapter.note;
 
-import use_case.note.NoteInputBoundary;
+import use_case.note.TranslateTextInputBoundary;
 
 /**
  * Controller for our Note related Use Cases.
  */
-public class NoteController {
+public class TranslateTextController {
 
-    private final NoteInputBoundary noteInteractor;
+    private final TranslateTextInputBoundary noteInteractor;
 
-    public NoteController(NoteInputBoundary noteInteractor) {
+    public TranslateTextController(TranslateTextInputBoundary noteInteractor) {
         this.noteInteractor = noteInteractor;
     }
 

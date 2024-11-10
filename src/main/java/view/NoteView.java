@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import interface_adapter.note.NoteController;
+import interface_adapter.note.TranslateTextController;
 import interface_adapter.note.NoteState;
 import interface_adapter.note.NoteViewModel;
 
@@ -29,7 +29,7 @@ public class NoteView extends JPanel implements ActionListener, PropertyChangeLi
 
     private final JButton saveButton = new JButton("Save");
     private final JButton refreshButton = new JButton("Refresh");
-    private NoteController noteController;
+    private TranslateTextController translateTextController;
 
     public NoteView(NoteViewModel noteViewModel) {
 
@@ -44,7 +44,7 @@ public class NoteView extends JPanel implements ActionListener, PropertyChangeLi
         saveButton.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(saveButton)) {
-                        noteController.execute(noteInputField.getText());
+                        translateTextController.execute(noteInputField.getText());
 
                     }
                 }
@@ -53,7 +53,7 @@ public class NoteView extends JPanel implements ActionListener, PropertyChangeLi
         refreshButton.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(refreshButton)) {
-                        noteController.execute(null);
+                        translateTextController.execute(null);
 
                     }
                 }
@@ -88,8 +88,8 @@ public class NoteView extends JPanel implements ActionListener, PropertyChangeLi
         noteInputField.setText(state.getNote());
     }
 
-    public void setNoteController(NoteController controller) {
-        this.noteController = controller;
+    public void setNoteController(TranslateTextController controller) {
+        this.translateTextController = controller;
     }
 }
 
