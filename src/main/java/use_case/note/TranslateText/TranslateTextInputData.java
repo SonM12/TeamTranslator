@@ -1,4 +1,4 @@
-package use_case.note.TranslateText;
+package usecase.note.TranslateText;
 
 /**
  * The Input Data for the Signup Use Case.

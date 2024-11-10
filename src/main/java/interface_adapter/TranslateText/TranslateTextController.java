@@ -8,16 +8,17 @@ import use_case.note.TranslateTextInputData;
  */
 public class TranslateTextController {
 
-    private final LoginInputBoundary translateTextUseCaseInteractor;
+    private final TranslateTextInputBoundary translateTextUseCaseInteractor;
 
-    public TranslateTextController(LoginInputBoundary translateTextUseCaseInteractor) {
+    public TranslateTextController(TranslateTextInputBoundary translateTextUseCaseInteractor) {
         this.translateTextUseCaseInteractor = translateTextUseCaseInteractor;
     }
 
     /**
      * Executes the Login Use Case.
-     * @param username the username of the user logging in
-     * @param password the password of the user logging in
+     * @param username the username of the user translate text
+     * @param password the password of the user translate text
+     * @param repeatPassword the repeatPassword
      */
     public void execute(String username, String password) {
         final TranslateTextInputData translateTextInputData = new TranslateTextInputData(

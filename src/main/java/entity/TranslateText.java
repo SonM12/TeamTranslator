@@ -3,7 +3,7 @@ package entity;
 /**
  * The representation of a password-protected user for our program.
  */
-public class User {
+public class TranslateText {
 
     private final String name;
     private final String password;
@@ -12,8 +12,7 @@ public class User {
     private final String inputText;
     private final String outputText;
 
-
-    public User(String name, String password, String inputLanguage,
+    public TranslateText(String name, String password, String inputLanguage,
                 String outputLanguage, String inputText, String outputText) {
         this.name = name;
         this.password = password;
