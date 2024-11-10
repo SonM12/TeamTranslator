@@ -3,7 +3,7 @@ package app;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import interface_adapter.note.TranslateTextController;
+import interface_adapter.note.NoteController;
 import interface_adapter.note.NotePresenter;
 import interface_adapter.note.NoteViewModel;
 import use_case.note.NoteDataAccessInterface;
@@ -44,7 +44,7 @@ public class NoteAppBuilder {
         noteInteractor = new TranslateTextInteractor(
                 noteDAO, noteOutputBoundary);
 
-        final TranslateTextController controller = new TranslateTextController(noteInteractor);
+        final NoteController controller = new NoteController(noteInteractor);
         if (noteView == null) {
             throw new RuntimeException("addNoteView must be called before addNoteUseCase");
         }

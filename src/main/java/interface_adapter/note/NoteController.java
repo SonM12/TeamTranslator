@@ -5,11 +5,11 @@ import use_case.note.TranslateTextInputBoundary;
 /**
  * Controller for our Note related Use Cases.
  */
-public class TranslateTextController {
+public class NoteController {
 
     private final TranslateTextInputBoundary noteInteractor;
 
-    public TranslateTextController(TranslateTextInputBoundary noteInteractor) {
+    public NoteController(TranslateTextInputBoundary noteInteractor) {
         this.noteInteractor = noteInteractor;
     }
 
