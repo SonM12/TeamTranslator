@@ -5,6 +5,7 @@ import data_access.DBTranslateTextDataAccessObject;
 import use_case.imageUpload.ImageUploadDataAccessInterface;
 import use_case.switchTranslation.SwitchTranslationDataAccessInterface;
 import use_case.translateText.TranslateTextDataAccessInterface;
+import use_case.textToSpeech.TextToSpeechDataAccessInterface;
 
 /**
  * An application where we can translate text.
@@ -24,14 +25,17 @@ public class MainTranslatorApplication {
         final TranslateTextDataAccessInterface translateTextDataAccess = new DBTranslateTextDataAccessObject();
         final ImageUploadDataAccessInterface imageUploadDataAccess = new DBImageUploadDataAccessObject();
         final SwitchTranslationDataAccessInterface switchTranslationDataAccess = new DBTranslateTextDataAccessObject();
+        final TextToSpeechDataAccessInterface textToSpeechDataAccess = new DBTranslateTextDataAccessObject();
 
         final app.TranslateTextAppBuilder builder = new app.TranslateTextAppBuilder();
         builder.addTranslateTextDAO(translateTextDataAccess)
                 .addImageUploadDAO(imageUploadDataAccess)
                 .addSwitchTranslationDAO(switchTranslationDataAccess)
+                .addTextToSpeechDAO(textToSpeechDataAccess)
                 .addTranslateTextView()
                 .addTranslateTextUseCase()
                 .addSwitchTranslationUseCase()
-                .addImageUploadUseCase().build().setVisible(true);
+                .addImageUploadUseCase()
+                .addTextToSpeechUseCase().build().setVisible(true);
     }
 }

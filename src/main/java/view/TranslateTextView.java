@@ -23,6 +23,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import interface_adapter.imageUpload.ImageUploadController;
 import interface_adapter.switchTranslation.SwitchTranslationController;
+import interface_adapter.textToSpeech.TextToSpeechController;
 import interface_adapter.translateText.TranslateState;
 import interface_adapter.translateText.TranslateTextController;
 import interface_adapter.translateText.TranslateTextViewModel;
@@ -56,6 +57,7 @@ public class TranslateTextView extends JPanel implements ActionListener, Propert
     private TranslateTextController translateTextController;
     private ImageUploadController imageUploadController;
     private SwitchTranslationController switchTranslationController;
+    private TextToSpeechController textToSpeechController;
 
     public TranslateTextView(TranslateTextViewModel translateTextViewModel,
                              TranslateTextDataAccessInterface translateTextDataAccess) {
@@ -142,6 +144,22 @@ public class TranslateTextView extends JPanel implements ActionListener, Propert
             switchTranslationController.execute(inputText, inputLang.toString(), outputLang.toString());
         });
 
+        inputSpeakerButton.addActionListener(
+                evt -> {
+                    if (evt.getSource().equals(inputSpeakerButton)) {
+                        textToSpeechController.execute(translateInputField.getText());
+                    }
+                }
+        );
+
+        outputSpeakerButton.addActionListener(
+                evt -> {
+                    if (evt.getSource().equals(outputSpeakerButton)) {
+                        textToSpeechController.execute(translateOutputField.getText());
+                    }
+                }
+        );
+
         inputSpeakerButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         outputSpeakerButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -206,5 +224,9 @@ public class TranslateTextView extends JPanel implements ActionListener, Propert
 
     public void setSwitchTranslationController(SwitchTranslationController switchTranslationController) {
         this.switchTranslationController = switchTranslationController;
+    }
+
+    public void setTextToSpeechController(TextToSpeechController textToSpeechController) {
+        this.textToSpeechController = textToSpeechController;
     }
 }
