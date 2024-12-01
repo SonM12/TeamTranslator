@@ -39,7 +39,7 @@ This Translator Program requires installation of FreeTTS.
    * freetts-1.2.2-bin/freetts-1.2/lib/
 4. Run jsapi.exe file and install freeTTS
     * For Mac users, open terminal and browse to the extracted /lib folder.
-    * chmod +x ./jsapi.sh and afterwards sh ./jsapi
+    * chmod +x ./jsapi.sh and afterwards sh ./jsapi.sh
 5. Check jsapi.jar file is installed in the /lib folder.
 6. Include /lib folder into the project.
    1. File -> project structure -> Project Settings -> Modules
