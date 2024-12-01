@@ -2,7 +2,7 @@ package data_access;
 
 import java.util.Arrays;
 
-public class LanguageClass implements LanguageMapperInterface {
+public class LanguageClass implements ILanguageMapper {
 
     private final String inputLanguage;
     private final String[] outputLanguages;
