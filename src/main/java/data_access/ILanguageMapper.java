@@ -6,7 +6,7 @@ import use_case.translateText.DataAccessException;
  * LanguageMapper Interface.
  */
 
-public interface LanguageMapperInterface {
+public interface ILanguageMapper {
     /**
      * Given an input language, return what it will be when that language an output language.
      * @param inputLanguage  the language name of text (ie. English). Set to null to detect language.

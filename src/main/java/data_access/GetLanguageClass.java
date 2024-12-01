@@ -7,7 +7,7 @@ import java.util.List;
  * LanguageMapper
  */
 
-public class GetLanguageClass {
+public class GetLanguageClass implements ILanguageClassGetter {
 
     LanguageClassFactory factory = new LanguageClassFactory();
     private static final List<LanguageClass> languageClasses = new ArrayList<>();
@@ -29,7 +29,8 @@ public class GetLanguageClass {
     /**
      * @param language the language name of text (ie. English).
      */
-    public LanguageMapperInterface giveLanguageClass(String language) {
+    @Override
+    public ILanguageMapper giveLanguageClass(String language) {
         // If the language has multiple target languages
        for (LanguageClass languageClass: languageClasses) {
            if (languageClass.matches(language)) {

@@ -79,11 +79,13 @@ public class DBTranslateTextDataAccessObject extends DeeplTranslator implements 
     @Override
     public Map<String, String> switchLanguagesAndTexts(String inputText, String inputLanguage, String outputLanguage)
             throws DataAccessException {
-        // translating the text using the translateText method
-        GetLanguageClass languageClassGetter = new GetLanguageClass();
-        final LanguageMapperInterface outputLanguageClass = languageClassGetter.giveLanguageClass(inputLanguage);
-        final LanguageMapperInterface inputLanguageClass = languageClassGetter.giveLanguageClass(outputLanguage);
 
+        // Use ILanguageClassGetter interface to get LanguageMapperInterfaces for input and output languages
+        ILanguageClassGetter languageClassGetter = new GetLanguageClass();
+        final ILanguageMapper inputLanguageClass = languageClassGetter.giveLanguageClass(inputLanguage);
+        final ILanguageMapper outputLanguageClass = languageClassGetter.giveLanguageClass(outputLanguage);
+
+        // translating the text using the translateText method
         final Map<String, String> translationResult = translateText(inputText, inputLanguage, outputLanguage);
 
         // Getting the translated text
@@ -96,11 +98,11 @@ public class DBTranslateTextDataAccessObject extends DeeplTranslator implements 
 
         switchedResult.put(Constants.TEXT_KEY, translatedText);
 
-        switchedResult.put(Constants.LANGUAGE_KEY, inputLanguageClass.giveInput(outputLanguage));
+        switchedResult.put(Constants.LANGUAGE_KEY, outputLanguageClass.giveInput(outputLanguage));
 
         switchedResult.put("translatedText", inputText);
 
-        switchedResult.put("outputLanguage", outputLanguageClass.giveOutput(inputLanguage));
+        switchedResult.put("outputLanguage", inputLanguageClass.giveOutput(inputLanguage));
 
         return switchedResult;
     }
