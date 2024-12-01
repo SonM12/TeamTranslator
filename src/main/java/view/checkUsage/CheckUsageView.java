@@ -65,7 +65,6 @@ public class CheckUsageView extends JPanel implements ActionListener, PropertyCh
 
         checkUsageButton.addActionListener(
                 evt -> {
-                    final CheckUsageState state = new CheckUsageState();
                     checkUsageController.execute();
                 }
         );

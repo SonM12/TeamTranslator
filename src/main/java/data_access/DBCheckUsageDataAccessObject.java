@@ -14,9 +14,8 @@ import use_case.checkUsage.CheckUsageDataAccessInterface;
 import use_case.translateText.DataAccessException;
 
 /**
- * The DAO for translating file using DeepL API.
+ * The DAO for getting usage using DeepL API.
  * API links: <a href="https://developers.deepl.com/docs/api-reference/translate">...</a>.
- *            <a href="https://developers.deepl.com/docs/api-reference/document">...</a>.
  */
 public class DBCheckUsageDataAccessObject extends DeeplTranslator
         implements CheckUsageDataAccessInterface {
@@ -36,10 +35,10 @@ public class DBCheckUsageDataAccessObject extends DeeplTranslator
     }
 
     /**
-     * Translate a text into the specified output language.
+     * Get the character count and character limit as a Map.
      *
-     * @return a set withs keys "text" and "language" with their corresponding values
-     * @throws DataAccessException if the text could not be translated for any reason
+     * @return a set withs keys "character_count" and "character_limit" with their corresponding values
+     * @throws DataAccessException if the usage cannot be accessed for any reason
      */
     private Map<String, String> checkUsage() throws DataAccessException {
         try {

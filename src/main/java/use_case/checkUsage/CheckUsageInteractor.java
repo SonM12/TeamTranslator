@@ -22,6 +22,7 @@ public class CheckUsageInteractor {
 
     /**
      * Executes the checkUsage use case.
+     * @throws DataAccessException
      */
     public void execute() {
 
