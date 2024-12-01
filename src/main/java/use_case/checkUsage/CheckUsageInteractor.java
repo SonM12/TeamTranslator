@@ -4,7 +4,7 @@ import entity.CheckUsage;
 import use_case.translateText.DataAccessException;
 
 /**
- The CheckUsage Interactor.
+ * The CheckUsage Interactor.
  */
 public class CheckUsageInteractor {
 
@@ -20,7 +20,9 @@ public class CheckUsageInteractor {
         this.checkUsage = checkUsage;
     }
 
-    @Override
+    /**
+     * Executes the checkUsage use case.
+     */
     public void execute() {
 
         try {

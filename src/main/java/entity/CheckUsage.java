@@ -1,8 +1,5 @@
 package entity;
 
-import java.util.Map;
-
-import data_access.Constants;
 import use_case.checkUsage.CheckUsageDataAccessInterface;
 import use_case.translateText.DataAccessException;
 

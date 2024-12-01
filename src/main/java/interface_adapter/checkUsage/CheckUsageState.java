@@ -1,7 +1,7 @@
 package interface_adapter.checkUsage;
 
 /**
- The State for checking Usage.
+ * The State for checking Usage.
  */
 
 public class CheckUsageState {

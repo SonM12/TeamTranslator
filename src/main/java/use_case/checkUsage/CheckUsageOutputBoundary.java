@@ -1,7 +1,5 @@
 package use_case.checkUsage;
 
-import use_case.checkUsage.CheckUsageOutputData;
-
 /**
  * The output boundary for the Translate Text Use Case.
  */
