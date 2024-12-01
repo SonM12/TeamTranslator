@@ -18,6 +18,7 @@ import use_case.translateText.DataAccessException;
 
 /**
  * The DAO for recognizing text from an image using OCR Space API.
+ * API Link: <a href="https://ocr.space/ocrapi">...</a>
  */
 public class DBImageUploadDataAccessObject implements ImageUploadDataAccessInterface {
 
