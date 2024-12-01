@@ -12,7 +12,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import app.CheckUsageAppBuilder;
 import app.TranslateFileAppBuilder;
+import data_access.DBCheckUsageDataAccessObject;
 import data_access.DBTranslateFileDataAccessObject;
 import interface_adapter.imageUpload.ImageUploadController;
 import interface_adapter.switchTranslation.SwitchTranslationController;
@@ -26,7 +28,7 @@ import interface_adapter.translateText.TranslateTextController;
 public class TranslateTextViewButtonPanel extends JPanel {
 
     private final JButton textButton = new JButton("Translate Text");
-    private final JButton videoButton = new JButton("Translate Video");
+    private final JButton usageButton = new JButton("Check Usage");
     private final JButton fileButton = new JButton("Translate File");
     private final JButton switchButton = new JButton("Switch");
     private final JButton imageButton = new JButton("Image Upload");
@@ -34,6 +36,9 @@ public class TranslateTextViewButtonPanel extends JPanel {
     private final TranslateFileAppBuilder translateFileAppBuilder = new TranslateFileAppBuilder();
     private final JFrame fileFrame = translateFileAppBuilder.addTranslateFileDAO(new DBTranslateFileDataAccessObject())
             .addTranslateFileView().addTranslateFileUseCase().build();
+    private final CheckUsageAppBuilder checkUsageAppBuilder = new CheckUsageAppBuilder();
+    private final JFrame usageFrame = checkUsageAppBuilder.addCheckUsageDAO(new DBCheckUsageDataAccessObject())
+            .addCheckUsageView().addCheckUsageUseCase().build();
     private final TranslateTextViewTextPanel inputPanel;
     private final TranslateTextViewTextPanel outputPanel;
     private TranslateTextController translateTextController;
@@ -43,12 +48,13 @@ public class TranslateTextViewButtonPanel extends JPanel {
     public TranslateTextViewButtonPanel(TranslateTextView view, TranslateTextViewTextPanel inputPanel,
                                         TranslateTextViewTextPanel outputPanel) {
         this.add(textButton);
-        this.add(videoButton);
+        this.add(usageButton);
         this.add(fileButton);
         this.add(switchButton);
         this.add(imageButton);
 
         addTextButtonListener();
+        addUsageButtonListener();
         addImageButtonListener();
         addSwitchButtonListener();
         addFileButtonListener();
@@ -68,6 +74,19 @@ public class TranslateTextViewButtonPanel extends JPanel {
                         translateTextController.execute(inputPanel.getLanguageComboBox().getSelectedItem().toString(),
                                 inputPanel.getTextArea().getText(), outputPanel.getLanguageComboBox().getSelectedItem()
                                         .toString());
+                    }
+                }
+        );
+    }
+
+    /**
+     * Creates and injects an action listener into usageButton.
+     */
+    public void addUsageButtonListener() {
+        usageButton.addActionListener(
+                evt -> {
+                    if (evt.getSource() == usageButton) {
+                        usageFrame.setVisible(true);
                     }
                 }
         );
