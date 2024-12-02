@@ -22,7 +22,7 @@ public class CheckUsageInteractor {
 
     /**
      * Executes the checkUsage use case.
-     * @throws DataAccessException
+     * @throws DataAccessException when character count and limit is not accessible.
      */
     public void execute() {
 
@@ -30,10 +30,10 @@ public class CheckUsageInteractor {
             checkUsage.setCharacterCount(dataAccessObject.getCharacterCount());
             checkUsage.setCharacterLimit(dataAccessObject.getCharacterLimit());
 
-            if (dataAccessObject.getCharacterCount().isEmpty()) {
+            if (dataAccessObject.getCharacterCount() == null || (dataAccessObject.getCharacterCount().isEmpty())) {
                 checkUsageOutputBoundary.prepareFailView("Cannot access the character count");
             }
-            else if (dataAccessObject.getCharacterLimit().isEmpty()) {
+            if (dataAccessObject.getCharacterLimit() == null || (dataAccessObject.getCharacterLimit().isEmpty())) {
                 checkUsageOutputBoundary.prepareFailView("Cannot access the character limit");
             }
 

@@ -117,13 +117,14 @@ Potential API: document translation API
 ![TranslateFile View](Images/TranslateFile%20View.jpg)
 
 # 4.
-Karmen is taking a history class and needs to watch a documentary in a foreign language. 
-To fully understand the documentary, she wants to translate its script into a language she’s comfortable with. 
-Using the "Translate Video" feature, Karmen gains a deeper understanding of the documentary.
+Karmen is working on a history assignment that requires translating a lengthy article from a foreign language.
+To ensure she stays within the free-tier limits of the translation service, she needs to monitor the character count
+and limit from the App. Using the "CheckUsage" feature, Karmen can track her usage, avoid exceeding the limit
+and complete her assignment without unexpected costs.
 [Karmen Zhu’s User Story]
-Potential API: YouTube
+Potential API: Usage & Quota DeepL API
 
-![TranslateVideo View.jpg](Images/TranslateVideo%20View.jpg)
+![CheckUsageView.jpg](Images/CheckUsageView.jpg)
 
 # 5.
 Roy is studying French in order to prepare for his French proficiency test.
