@@ -27,6 +27,7 @@ import interface_adapter.translateText.TranslateTextController;
  */
 public class TranslateTextViewButtonPanel extends JPanel {
 
+    private final JPanel buttonPanel = this;
     private final JButton textButton = new JButton("Translate Text");
     private final JButton usageButton = new JButton("Check Usage");
     private final JButton fileButton = new JButton("Translate File");
@@ -110,7 +111,7 @@ public class TranslateTextViewButtonPanel extends JPanel {
                     final FileNameExtensionFilter fileFilter = new FileNameExtensionFilter("Image Files",
                             "png", "jpg", "gif", "pdf", "tif", "bmp");
                     fileChooser.setFileFilter(fileFilter);
-                    final int result = fileChooser.showOpenDialog(view);
+                    final int result = fileChooser.showOpenDialog(buttonPanel);
                     if (result == JFileChooser.APPROVE_OPTION) {
                         final File imageFile = fileChooser.getSelectedFile();
                         imageUploadController.execute(imageFile, inputPanel.getTextArea().getText());
