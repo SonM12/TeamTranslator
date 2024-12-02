@@ -92,7 +92,7 @@ a picture and translate the sign.
 
 <ins>Example use case tutorial:</ins>
 
-[Translate Image Demo](Resources/)<br><br>
+[Translate Image Demo](Resources/ImageUploadDemo.mp4)<br><br>
 
 5. **Check Usage**
 
