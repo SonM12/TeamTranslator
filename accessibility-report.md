@@ -1,23 +1,28 @@
-As a group, answer the following questions — 
-place your answers in a file called accessibility-report.md in your group's GitHub repository:
+## Principle of Universal Design
 
-For each Principle of Universal Design, write 2-3 sentences — or point form notes
-— explaining which features of your program adhere to that principle. 
-If you do not have any such features, you can either:
-(a) Describe features that you could implement in the future that would adhere to the principle or
-(b) Explain why the principle does not apply to a program like yours.
+1) Equitable Use (YES)
+   * All input format requirements are the same for all users, ensuring fairness in accessing program's features
 
+2) Flexibility in Use (YES)
+   * Provided translation various input types, like text, files and image
+   * Allow usage tracking for characters used, which is beyond solving language related problem
 
-# Principle 1: Equitable Use
+3) Simple and Intuitive Use (NO)
+   * Initial interface is in English, which requires users to understand basic English before operating the program
 
-# Principle 2: Flexibility in Use
-# Principle 3: Simple and Intuitive Use
-# Principle 4: Perceptible Information
-# Principle 5: Tolerance for Error
-# Principle 6: Low Physical Effort
-# Principle 7: Size and Space for Approach and Use
+4) Perceptible Information (YES)
+    * Buttons' labels differntiate by their features, which direct users to feature easily
 
+5) Tolerance for Error (YES)
+   * All errors can be retrieved by re-entering the input and preventing the program from crashing
 
+6) Low Physical Effort (YES)
+   * Buttons are gathered in a line, which minimize effort to find all program's features 
+
+7) Size and Space for Approach and Use
+   * Buttons are appropriate in size and are for easy tapping, which make reaching to all features comfortable
+
+## Marketed Audience
 The program will be marketed towards students who are seeking a flexible learning tool or native English learners
 who wish to practice their oral skill and tourists who need to translation on signs in foreign countries. 
 Despite the general text translation features, this program features text-to-speech translation for English, 
@@ -25,6 +30,7 @@ which is aiming to assist people with improving English proficiency. The imageTr
 in a picture and translated them in desired language, which is great for understanding road sign or instructions 
 in foreign countries.
 
+## Non-benifited Audiences
 Non-English speakers or individuals who do not know English are the potential demographics who are less likely to 
 use our program. Although our program support languages translated into English, for those who are not proficient 
 in English might struggle to fully understand the functionality of our program as the interface is primarily in 
