@@ -150,12 +150,13 @@ This Translator Program requires installation of FreeTTS.
 1. Ensure you have Java (preferably v.11) Installed. If you do not, follow the instructions in this link:
    https://www.java.com/en/download/help/download_options.html
 2. Fork and clone the repository and open it in IntelliJ.
-3. Head to the README file and follow the instruction in [Installation Instructions](#3-installation-instructions)
-4. Then go to the [Features of the Software](#2-features-of-the-software) section and start exploring the software
+3. If you notice that some files are underlined in red, try reloading maven.
+4. Head to the README file and follow the instruction in [Installation Instructions](#3-installation-instructions)
+5. Then go to the [Features of the Software](#2-features-of-the-software) section and start exploring the software
    with your features of choice.
-5. Once you are done head to the [Feedback](#6-feedback) section and complete feedback form. This will help us improve
+6. Once you are done head to the [Feedback](#6-feedback) section and complete feedback form. This will help us improve
    the software!
-6. You can also make a contribution if you head over to [Contributions](#7-contributions).
+7. You can also make a contribution if you head over to [Contributions](#7-contributions).
 
 ## 5. License
 License is in the Project file.
