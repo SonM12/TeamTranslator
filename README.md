@@ -116,12 +116,12 @@ complete her assignment without unexpected costs.
 
 6. **Text to Speech**
 
-The text to speech use case allows the user to listen to the pronounciation of the translated text.
+The text to speech use case allows the user to listen to the pronunciation of the translated text.
 
 <ins>Example user story:</ins>
-Roy is studying French in order to prepare for his French proficiency test. However, while studying the subject,
+As an international student, Roy is studying English in order to prepare for his English proficiency test. However, while studying the subject,
 he came across some words or sentences he does not know how to pronounce. Using the speaker button located at the
-bottom right side of text boxes, Roy can listen to the inputted pronounciation.
+bottom right side of text boxes, Roy can listen to the speech.
 
 <ins>Example use case tutorial:</ins>
 
