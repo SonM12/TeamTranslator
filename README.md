@@ -28,6 +28,11 @@ Mingyu (Roy) Son / SonM12
 
 
 ## 1. Summary of the project's purpose
+The program is a translation tool designed to help users for translating text and files between multiple
+languages, switching between input and output languages, converting images to text for translation, providing
+pronounciation of the translated text and usage-tracking for character used. The program aims to solve problems 
+regarding language barriers bewteen different media. This program is useful for new language learners, people who
+work with foreign language materials, or people who need efficient translation tools to encounter everyday situations.
 
 ## 2. Features of the Software
 
