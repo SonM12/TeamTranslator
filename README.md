@@ -33,6 +33,7 @@ Mingyu (Roy) Son / SonM12
 
 The Translator has mutlitple features which include:<br><br>
 
+
 1. **Translate Text**
 
 The translate text use case allows the user to translate text from one language to another.
