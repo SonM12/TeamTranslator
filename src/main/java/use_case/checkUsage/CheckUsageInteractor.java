@@ -33,7 +33,7 @@ public class CheckUsageInteractor {
             if (dataAccessObject.getCharacterCount() == null || (dataAccessObject.getCharacterCount().isEmpty())) {
                 checkUsageOutputBoundary.prepareFailView("Cannot access the character count");
             }
-            if (dataAccessObject.getCharacterLimit() == null || (dataAccessObject.getCharacterLimit().isEmpty())) {
+            else if (dataAccessObject.getCharacterLimit() == null || (dataAccessObject.getCharacterLimit().isEmpty())) {
                 checkUsageOutputBoundary.prepareFailView("Cannot access the character limit");
             }
 
